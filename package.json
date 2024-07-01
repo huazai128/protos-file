@@ -1,0 +1,16 @@
+{
+  "name": "proto-file",
+  "version": "1.0.0",
+  "description": "proto共享文件",
+  "main": "index.js",
+  "repository": "https://github.com/huazai128/protos.git",
+  "author": "zhouweihua <zhouweihua@joyy.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:protos": "sh ./scripts/proto.sh"
+  },
+  "devDependencies": {
+    "protoc-gen-ts": "^0.8.7",
+    "ts-proto": "^1.180.0"
+  }
+}
