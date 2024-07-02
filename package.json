@@ -7,9 +7,11 @@
   "author": "zhouweihua <zhouweihua@joyy.com>",
   "license": "MIT",
   "scripts": {
-    "build:protos": "sh ./scripts/proto.sh"
+    "build:protos": "sh ./scripts/proto.sh",
+    "tsp": "tsproto --path ./protos"
   },
   "devDependencies": {
+    "nestjs-proto-gen-ts": "^1.0.21",
     "protoc-gen-ts": "^0.8.7",
     "ts-proto": "^1.180.0"
   }
