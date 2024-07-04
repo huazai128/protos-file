@@ -8,12 +8,17 @@ import { Metadata } from '@grpc/grpc-js';
 export namespace authproto {
     export interface AuthService {
         login(
-            data: LoginReuset,
+            data: LoginRequest,
+            metadata?: Metadata,
+            ...rest: any[]
+        ): Observable<LoginResponse>;
+        validateUser(
+            data: ValidateUserRequest,
             metadata?: Metadata,
             ...rest: any[]
         ): Observable<LoginResponse>;
     }
-    export interface LoginReuset {
+    export interface LoginRequest {
         account?: string;
         password?: string;
     }
@@ -22,6 +27,9 @@ export namespace authproto {
         userId?: number;
         account?: string;
         expiresIn?: number;
+    }
+    export interface ValidateUserRequest {
+        userId?: number;
     }
 }
 
