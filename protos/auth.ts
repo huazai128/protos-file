@@ -5,6 +5,7 @@
 // source: protos/auth.proto
 
 /* eslint-disable */
+import { Observable } from "rxjs";
 
 export const protobufPackage = "authproto";
 
@@ -25,6 +26,6 @@ export interface ValidateUserRequest {
 }
 
 export interface AuthService {
-  login(request: LoginRequest): Promise<LoginResponse>;
-  validateUser(request: ValidateUserRequest): Promise<LoginResponse>;
+  login(request: LoginRequest): Observable<LoginResponse>;
+  validateUser(request: ValidateUserRequest): Observable<LoginResponse>;
 }
