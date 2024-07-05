@@ -25,7 +25,18 @@ export interface ValidateUserRequest {
   userId: number;
 }
 
+export interface TokenRequest {
+  userId: number;
+  account: string;
+}
+
+export interface TokenResponse {
+  accessToken: string;
+  expiresIn: number;
+}
+
 export interface AuthService {
   login(request: LoginRequest): Observable<LoginResponse>;
   validateUser(request: ValidateUserRequest): Observable<LoginResponse>;
+  creatToken(request: TokenRequest): Observable<TokenResponse>;
 }
