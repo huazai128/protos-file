@@ -27,7 +27,7 @@ message UserInfo {
   int32 userId = 1;
   string account = 2;
   string avatar = 3;
-  string role = 4;
+  repeated int32 role = 4;
   string createAt = 5;
   string updateAt = 6;
 }

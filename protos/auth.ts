@@ -27,7 +27,7 @@ export interface UserInfo {
   userId: number;
   account: string;
   avatar: string;
-  role: string;
+  role: number[];
   createAt: string;
   updateAt: string;
 }
