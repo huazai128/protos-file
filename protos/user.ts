@@ -18,6 +18,7 @@ export interface getUsersResponse {
 export interface User {
   id: number;
   name: string;
+  createdAt: Date | undefined;
 }
 
 export interface UserService {
