@@ -4,6 +4,9 @@ package userproto;
 
 import "google/protobuf/timestamp.proto";
 
+import public "orders/service.proto";
+
+
 
 service UserService {
     rpc getUsers(getBooksRequest) returns (getUsersResponse) {}

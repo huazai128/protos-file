@@ -8,12 +8,12 @@
   "license": "MIT",
   "scripts": {
     "build:protos": "sh ./scripts/proto.sh",
-    "tsp": "tsproto --path ./protos",
-    "proto-ts": "protoc --plugin=./node_modules/ts-proto/protoc-gen-ts_proto.CMD --ts_proto_out=./ ./protos/*.proto --ts_proto_opt=outputEncodeMethods=false,outputJsonMethods=false,outputClientImpl=false"
+    "tsp": "tsproto --path ./protos", 
+    "proto-ts": "protoc --proto_path=./protos --plugin=./node_modules/ts-proto/protoc-gen-ts_proto.CMD --ts_proto_out=./protos ./protos/*.proto --ts_proto_opt=outputEncodeMethods=false,outputJsonMethods=false,outputClientImpl=false"
   },
   "devDependencies": {
     "nestjs-proto-gen-ts": "^1.0.21",
     "protoc-gen-ts": "^0.8.7",
-    "ts-proto": "^1.181.1"
+    "ts-proto": "^1.180.0"
   }
 }
