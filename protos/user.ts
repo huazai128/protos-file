@@ -5,6 +5,7 @@
 // source: user.proto
 
 /* eslint-disable */
+import { Observable } from "rxjs";
 
 export const protobufPackage = "userproto";
 
@@ -22,5 +23,5 @@ export interface User {
 }
 
 export interface UserService {
-  getUsers(request: getBooksRequest): Promise<getUsersResponse>;
+  getUsers(request: getBooksRequest): Observable<getUsersResponse>;
 }
