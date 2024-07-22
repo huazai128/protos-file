@@ -31,7 +31,6 @@ export interface UserService {
   getUsers(request: getBooksRequest): Observable<getUsersResponse>;
   find(request: Order): Promise<Order>;
   sync(request: Observable<Order>): Observable<Order>;
-  syncCall(request: Observable<Order>): Observable<Order>;
   streamReq(request: Observable<Order>): Promise<Order>;
   streamReqCall(request: Observable<Order>): Promise<Order>;
 }
