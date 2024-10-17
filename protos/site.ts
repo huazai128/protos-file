@@ -53,7 +53,7 @@ export interface SiteQuery {
 
 export interface SiteListRepeonse {
   /** 文档列表 */
-  docs: SiteDocument[];
+  data: SiteDocument[];
   /** 分页信息 */
   pagination: Pagination | undefined;
 }

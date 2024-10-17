@@ -41,6 +41,6 @@ message SiteQuery {
 }
 
 message SiteListRepeonse {
-  repeated SiteDocument docs = 1;   // 文档列表
+  repeated SiteDocument data = 1;   // 文档列表
   Pagination pagination = 2;            // 分页信息
 }
