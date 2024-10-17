@@ -61,4 +61,5 @@ export interface SiteListRepeonse {
 export interface SiteService {
   saveSite(request: SiteRequest): Observable<SiteResponse>;
   getSiteList(request: SiteQuery): Observable<SiteListRepeonse>;
+  updateSite(request: SiteRequest): Observable<SiteResponse>;
 }

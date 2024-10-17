@@ -5,6 +5,7 @@ import public "common/pagination.proto";
 service SiteService {
   rpc saveSite (SiteRequest) returns (stream SiteResponse);
   rpc getSiteList (SiteQuery) returns (stream SiteListRepeonse);
+  rpc updateSite(SiteRequest) returns (stream SiteResponse);
 }
 
 message SiteDocument {
