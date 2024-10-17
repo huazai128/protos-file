@@ -1,7 +1,6 @@
 syntax = "proto3";
-import public "common/pagination.proto";
 package siteproto;
-
+import public "common/pagination.proto";
 
 service SiteService {
   rpc saveSite (SiteRequest) returns (stream SiteResponse);
