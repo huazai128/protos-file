@@ -6,6 +6,7 @@ service SiteService {
   rpc saveSite (SiteRequest) returns (stream SiteResponse);
   rpc getSiteList (SiteQuery) returns (stream SiteListRepeonse);
   rpc updateSite(SiteRequest) returns (stream SiteResponse);
+  rpc deleteSiteId(SiteResponse) returns (stream SiteResponse);
 }
 
 message SiteDocument {
@@ -21,7 +22,7 @@ message SiteDocument {
 }
 
 message SiteRequest {
-  int32 id = 1;
+  int64 id = 1;
   string name = 2;
   int32 isApi = 3;
   string reportUrl = 4;
@@ -29,7 +30,7 @@ message SiteRequest {
 }
 
 message SiteResponse {
-  int32 id = 1;
+  int64 id = 1;
 }
 
 message SiteQuery {
