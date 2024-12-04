@@ -154,6 +154,6 @@ export interface LogResponse {
 }
 
 export interface LogService {
-  /** 保存走kafka, 不过两种都支持 */
+  /** 保存走kafka, 不过两种都支持==== */
   saveLog(request: LogRequest): Observable<LogResponse>;
 }

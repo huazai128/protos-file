@@ -5,10 +5,9 @@ import "google/protobuf/struct.proto"; // 导入 google 的结构类型
 import "google/protobuf/timestamp.proto"; // 导入时间戳类型
 
 service LogService {
-  // 保存走kafka, 不过两种都支持
+  // 保存走kafka, 不过两种都支持====
   rpc saveLog (LogRequest) returns (stream LogResponse);
 }
-
 
 message LogRequest {
   int32 id = 1; // 唯一索引
