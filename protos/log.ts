@@ -153,7 +153,7 @@ export interface LogResponse {
   id: number;
 }
 
-export interface SiteService {
+export interface LogService {
   /** 保存走kafka, 不过两种都支持 */
   saveLog(request: LogRequest): Observable<LogResponse>;
 }
