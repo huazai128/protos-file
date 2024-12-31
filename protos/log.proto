@@ -1,9 +1,8 @@
 syntax = "proto3";
-
 package logproto;
 import public "common/pagination.proto";
 import "google/protobuf/struct.proto"; // 导入 google 的结构类型
-// import "google/protobuf/timestamp.proto"; // 导入时间戳类型
+import "google/protobuf/timestamp.proto"; // 导入时间戳类型
 
 service LogService {
   // 保存走kafka, 不过两种都支持====
@@ -12,26 +11,26 @@ service LogService {
 
 message LogRequest {
   int32 id = 1; // 唯一索引
-  // MetricsName reportsType = 2; // 报告类型
-  // string errorUUid = 3; // 错误 UUID
-  // string siteId = 4; // 站点 ID
-  // RefType onModel = 5; // 模型引用类型
-  // google.protobuf.Struct doce = 6; // 内容引用
-  // TransportCategory category = 7; // 日志类别
-  // string userId = 8; // 用户 ID
-  // string title = 9; // 标题
-  // string path = 10; // 路径
-  // string href = 11; // URL
-  // string method = 12; // 方法
-  // string url = 13; // 请求 URL
-  // google.protobuf.Struct body = 14; // 请求体参数
-  // google.protobuf.Struct params = 15; // 请求参数
-  // Response response = 16; // 响应
-  // string value = 17; // 错误信息
-  // string ip = 18; // IP 地址
-  // google.protobuf.Timestamp create_at = 19; // 创建时间
-  // google.protobuf.Timestamp update_at = 20; // 更新时间
-  // string traceId = 21; // 追踪 ID
+  MetricsName reportsType = 2; // 报告类型
+  string errorUUid = 3; // 错误 UUID
+  string siteId = 4; // 站点 ID
+  RefType onModel = 5; // 模型引用类型
+  google.protobuf.Struct doce = 6; // 内容引用
+  TransportCategory category = 7; // 日志类别
+  string userId = 8; // 用户 ID
+  string title = 9; // 标题
+  string path = 10; // 路径
+  string href = 11; // URL
+  string method = 12; // 方法
+  string url = 13; // 请求 URL
+  google.protobuf.Struct body = 14; // 请求体参数
+  google.protobuf.Struct params = 15; // 请求参数
+  Response response = 16; // 响应
+  string value = 17; // 错误信息
+  string ip = 18; // IP 地址
+  google.protobuf.Timestamp create_at = 19; // 创建时间
+  google.protobuf.Timestamp update_at = 20; // 更新时间
+  string traceId = 21; // 追踪 ID
 }
 enum TransportCategory {
   PV = 0; // 页面浏览
