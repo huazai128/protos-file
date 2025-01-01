@@ -68,6 +68,77 @@ export interface LogRequest {
   monitorId: string;
   /**  */
   nodeId: string;
+  /**  */
+  duration: number;
+  entryType: string;
+  startTime: number;
+  fmpTime: number;
+  cacheRate: string;
+  /** 请求信息 */
+  requestInfo:
+    | RequestInfo
+    | undefined;
+  /** DNS 时间 */
+  dns: number;
+  /** DOM 解析时间 */
+  domParse: number;
+  /** DOM 准备时间 */
+  domReady: number;
+  /** 首字节时间 */
+  firstByte: number;
+  /** 首次图像可见时间 */
+  fp: number;
+  /** 加载时间 */
+  load: number;
+  /** 资源时间 */
+  res: number;
+  /** 是否使用 SSL */
+  ssl: boolean;
+  /** TCP 时间 */
+  tcp: number;
+  /** 传输时间 */
+  trans: number;
+  /** TTFB（首次字节时间） */
+  ttfb: number;
+  /** 总时间 */
+  total: number;
+  endTime: number;
+  interactionTime: number;
+  loadedTime: number;
+  loadingTime: number;
+  queryUrl: string;
+  requestTime: number;
+  responseTime: number;
+  status: number;
+  statusText: string;
+  errorType: string;
+}
+
+export interface RequestInfo {
+  /** 内容下载 */
+  contentDownload: number;
+  /** DNS 查找 */
+  dnsLookup: number;
+  /** 初始连接 */
+  initialConnect: number;
+  /** 发起者类型 */
+  initiatorType: string;
+  /** 是否缓存 */
+  isCache: boolean;
+  /** 请求 URL */
+  name: string;
+  /** 请求时长 */
+  requestDuration: number;
+  /** 响应结束时间 */
+  responseEnd: number;
+  /** 是否使用 SSL */
+  ssl: boolean;
+  /** 开始时间 */
+  startTime: number;
+  /** TTFB（首次字节时间） */
+  timeToFirstByte: number;
+  /** 传输大小 */
+  transferSize: number;
 }
 
 /** 响应消息定义 */
