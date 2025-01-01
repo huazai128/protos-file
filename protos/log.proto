@@ -61,8 +61,28 @@ message LogRequest {
   int32 status = 49;
   string statusText = 50;
   string errorType = 51;
+  string content = 52;
+  Meta meta = 53;                 // 元数据
 
 }
+
+message Meta {
+  google.protobuf.Struct body = 1;
+  int64 endTime = 2;
+  int64 interactionTime = 3;
+  int64 loadedTime = 4;
+  int64 loadingTime = 5;
+  string method = 6;
+  google.protobuf.Struct params = 7;
+  string queryUrl = 8;
+  int64 requestTime = 9;
+  Response response = 10;
+  int64 responseTime = 11;
+  int32 status = 12;
+  string statusText = 13;
+  string url = 14;
+}
+
 
 message RequestInfo {
   double contentDownload = 1; // 内容下载

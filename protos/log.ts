@@ -112,6 +112,26 @@ export interface LogRequest {
   status: number;
   statusText: string;
   errorType: string;
+  content: string;
+  /** 元数据 */
+  meta: Meta | undefined;
+}
+
+export interface Meta {
+  body: { [key: string]: any } | undefined;
+  endTime: number;
+  interactionTime: number;
+  loadedTime: number;
+  loadingTime: number;
+  method: string;
+  params: { [key: string]: any } | undefined;
+  queryUrl: string;
+  requestTime: number;
+  response: Response | undefined;
+  responseTime: number;
+  status: number;
+  statusText: string;
+  url: string;
 }
 
 export interface RequestInfo {
