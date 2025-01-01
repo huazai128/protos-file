@@ -89,7 +89,7 @@ export interface LogRequest {
   /** 唯一索引 */
   id: number;
   /** 报告类型 */
-  reportsType: MetricsName;
+  reportsType: string;
   /** 错误 UUID */
   errorUUid: string;
   /** 站点 ID */
@@ -101,7 +101,7 @@ export interface LogRequest {
     | { [key: string]: any }
     | undefined;
   /** 日志类别 */
-  category: TransportCategory;
+  category: string;
   /** 用户 ID */
   userId: string;
   /** 标题 */
@@ -140,6 +140,10 @@ export interface LogRequest {
     | undefined;
   /** 追踪 ID */
   traceId: string;
+  /**  */
+  monitorId: string;
+  /**  */
+  nodeId: string;
 }
 
 /** 响应消息定义 */
