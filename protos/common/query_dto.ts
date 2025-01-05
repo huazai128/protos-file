@@ -22,4 +22,6 @@ export interface QueryDTO {
   timeSlot: number;
   keyId: string;
   keywordParmas: { [key: string]: any } | undefined;
+  page: number;
+  size: number;
 }
