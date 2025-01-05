@@ -24,4 +24,5 @@ export interface QueryDTO {
   keywordParmas: { [key: string]: any } | undefined;
   page: number;
   size: number;
+  total: number;
 }

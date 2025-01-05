@@ -16,4 +16,5 @@ message QueryDTO {
   google.protobuf.Struct keywordParmas = 11;
   int32 page = 12;
   int32 size = 13;
+  int32 total = 14;
 }
