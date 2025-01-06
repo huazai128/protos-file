@@ -25,4 +25,5 @@ export interface QueryDTO {
   page: number;
   size: number;
   total: number;
+  cursor: string;
 }

@@ -6,6 +6,7 @@
 
 /* eslint-disable */
 import { Observable } from "rxjs";
+import { type ChartItem } from "./common/chart_item";
 import { type Pagination } from "./common/pagination";
 import { type QueryDTO } from "./common/query_dto";
 
@@ -193,8 +194,15 @@ export interface LogList {
   pagination: Pagination | undefined;
 }
 
+export interface ChartList {
+  /** 文档列表 */
+  data: ChartItem[];
+}
+
 export interface LogService {
   /** 保存走kafka, 不过两种都支持==== */
   saveLog(request: SaveLogRequest): Observable<LogResponse>;
   getLogs(request: QueryDTO): Observable<LogList>;
+  cursorPaginate(request: QueryDTO): Observable<LogList>;
+  getLogsChart(request: QueryDTO): Observable<ChartList>;
 }
