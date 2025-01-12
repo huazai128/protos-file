@@ -14,7 +14,7 @@ service LogService {
 }
 
 message SaveLogRequest {
-  int32 id = 1;                      // 唯一索引
+  string id = 1;                      // 唯一索引
   string reportsType = 2;            // 报告类型
   string siteId = 3;                 // 站点 ID
   string onModel = 4;                // 模型引用类型
