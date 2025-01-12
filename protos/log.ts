@@ -21,10 +21,6 @@ export interface SaveLogRequest {
   siteId: string;
   /** 模型引用类型 */
   onModel: string;
-  /** 内容引用 */
-  doce:
-    | { [key: string]: any }
-    | undefined;
   /** 日志类别 */
   category: string;
   /** 用户 ID */
