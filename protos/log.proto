@@ -65,6 +65,27 @@ message SaveLogRequest {
   string errorType = 49;             // 错误类型
   string content = 50;               // 内容
   Meta meta = 51;                    // 元数据
+  string _id = 52;                   
+  string lang = 53;
+  string ua_result = 54; // 可空字段
+  string winScreen = 55; // 可空字段
+  string docScreen = 56; // 可空字段
+  string referrer = 57; // 可空字段
+  string prevHref = 58; // 可空字段
+  string jumpType = 59; // 可空字段
+  int32 type = 60;
+  string effectiveType = 61; // 可空字段
+  string mode = 62; // 可空字段
+  string ip_location = 63; // 可空字段
+  string tagText = 64;
+  string tagName = 65; // 可空字段
+  string nodeDom = 66; // 可空字段
+  repeated string classList = 67; // 数组
+  string logName = 68; // 可空字段
+  string logData = 69; // 可空字段
+  string logPos = 70; // 可空字段
+  string logId = 71; // 可空字段
+  string errorDetail = 72; // 可空字段
 }
 
 message Meta {
