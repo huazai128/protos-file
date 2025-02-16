@@ -67,7 +67,7 @@ message SaveLogRequest {
   Meta meta = 51;                    // 元数据
   string _id = 52;                   
   string lang = 53;
-  google.protobuf.Struct ua_result = 54; // 可空字段
+  string ua = 54; // 可空字段
   string winScreen = 55; // 可空字段
   string docScreen = 56; // 可空字段
   string referrer = 57; // 可空字段
