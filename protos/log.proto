@@ -67,7 +67,7 @@ message SaveLogRequest {
   Meta meta = 51;                    // 元数据
   string _id = 52;                   
   string lang = 53;
-  string ua_result = 54; // 可空字段
+  google.protobuf.Struct ua_result = 54; // 可空字段
   string winScreen = 55; // 可空字段
   string docScreen = 56; // 可空字段
   string referrer = 57; // 可空字段
@@ -86,6 +86,15 @@ message SaveLogRequest {
   string logPos = 70; // 可空字段
   string logId = 71; // 可空字段
   string errorDetail = 72; // 可空字段
+  repeated google.protobuf.Struct stackTrace = 73;
+  repeated BehaviorItem breadcrumbs = 74;
+  string errorUid = 75;
+}
+
+
+message  BehaviorItem {
+  string type = 1;
+  string monitorId = 2;
 }
 
 message Meta {
