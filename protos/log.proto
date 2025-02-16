@@ -53,13 +53,13 @@ message SaveLogRequest {
   double trans = 37;                 // 传输时间
   double ttfb = 38;                  // TTFB（首次字节时间）
   double total = 39;                 // 总时间
-  int64 endTime = 40;                // 结束时间
-  int64 interactionTime = 41;        // 交互时间
-  int64 loadedTime = 42;             // 加载时间
-  int64 loadingTime = 43;            // 正在加载时间
+  string endTime = 40;                // 结束时间
+  string interactionTime = 41;        // 交互时间
+  string loadedTime = 42;             // 加载时间
+  string loadingTime = 43;            // 正在加载时间
   string queryUrl = 44;              // 查询 URL
-  int64 requestTime = 45;            // 请求时间
-  int64 responseTime = 46;           // 响应时间
+  string requestTime = 45;            // 请求时间
+  string responseTime = 46;           // 响应时间
   int32 status = 47;                 // 状态
   string statusText = 48;            // 状态文本
   string errorType = 49;             // 错误类型
@@ -99,16 +99,16 @@ message  BehaviorItem {
 
 message Meta {
   google.protobuf.Struct body = 1;
-  int64 endTime = 2;
-  int64 interactionTime = 3;
-  int64 loadedTime = 4;
-  int64 loadingTime = 5;
+  string endTime = 2;
+  string interactionTime = 3;
+  string loadedTime = 4;
+  string loadingTime = 5;
   string method = 6;
   google.protobuf.Struct params = 7;
   string queryUrl = 8;
-  int64 requestTime = 9;
+  string requestTime = 9;
   Response response = 10;
-  int64 responseTime = 11;
+  string responseTime = 11;
   int32 status = 12;
   string statusText = 13;
   string url = 14;
