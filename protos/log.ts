@@ -164,6 +164,9 @@ export interface SaveLogRequest {
   stackTrace: { [key: string]: any }[];
   breadcrumbs: BehaviorItem[];
   errorUid: string;
+  pageId: string;
+  speed: string;
+  costTime: string;
 }
 
 export interface BehaviorItem {
