@@ -59,7 +59,7 @@ message SaveLogRequest {
   string nodeId = 21;                // 标签id
   double fmpTime = 22;               // 
   string cacheRate = 23;             // 
-  RequestInfo resourcePrefs = 24;      // 资源信息
+  repeated RequestInfo resourcePrefs = 24;      // 资源信息
   NTiming ntTiming = 25;            // 性能计时信息
   string endTime = 26;               // 结束时间
   string interactionTime = 27;       // 交互时间

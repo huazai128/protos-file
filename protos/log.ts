@@ -88,9 +88,7 @@ export interface SaveLogRequest {
   /**  */
   cacheRate: string;
   /** 资源信息 */
-  resourcePrefs:
-    | RequestInfo
-    | undefined;
+  resourcePrefs: RequestInfo[];
   /** 性能计时信息 */
   ntTiming:
     | NTiming
