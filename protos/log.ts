@@ -222,13 +222,13 @@ export interface RequestInfo {
 export interface Response {
   status: number;
   message: string;
-  result: { [key: string]: any } | undefined;
+  result: string;
 }
 
 export interface LogResponse {
   status: number;
   message: string;
-  result: string;
+  result: { [key: string]: any } | undefined;
 }
 
 export interface LogList {

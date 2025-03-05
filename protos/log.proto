@@ -146,13 +146,13 @@ message RequestInfo {
 message Response {
   int32 status = 1;
   string message = 2;
-  google.protobuf.Struct result = 3;
+  string result = 3;
 }
 
 message LogResponse {
   int32 status = 1;
   string message = 2;
-  string result = 3;
+  google.protobuf.Struct result = 3;
 }
 
 message LogList {
