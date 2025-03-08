@@ -155,7 +155,7 @@ export interface SaveLogRequest {
   logId: string;
   /** 可空字段 */
   errorDetail: string;
-  stackTrace: { [key: string]: any }[];
+  stackTrace: StackTrace[];
   breadcrumbs: BehaviorItem[];
   errorUid: string;
   pageId: string;
@@ -241,6 +241,13 @@ export interface LogList {
 export interface ChartList {
   /** 文档列表 */
   data: ChartItem[];
+}
+
+export interface StackTrace {
+  colno: number;
+  filename: string;
+  functionName: string;
+  lineno: string;
 }
 
 export interface LogService {

@@ -94,7 +94,7 @@ message SaveLogRequest {
   string logPos = 56;                // 可空字段
   string logId = 57;                 // 可空字段
   string errorDetail = 58;           // 可空字段
-  repeated google.protobuf.Struct stackTrace = 59;
+  repeated StackTrace stackTrace = 59;
   repeated BehaviorItem breadcrumbs = 60;
   string errorUid = 61;
   string pageId = 62;
@@ -162,4 +162,11 @@ message LogList {
 
 message ChartList {
   repeated ChartItem data = 1;   // 文档列表
+}
+
+message StackTrace {
+  int32 colno = 1;
+  string filename = 2;
+  string functionName = 3;
+  string lineno = 4;
 }
