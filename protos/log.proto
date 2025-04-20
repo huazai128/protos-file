@@ -11,7 +11,7 @@ service LogService {
   rpc getLogs (QueryDTO) returns (stream LogList);  // 获取日志列表
   rpc getLogsByCursor(QueryDTO) returns (stream LogList);  // 通过游标获取日志列表
   rpc getLogsChart(QueryDTO) returns (stream ChartList);  // 获取日志图表数据
-  rpc handleIPLocation(IPLocationRequest) returns (IPLocationResponse);  // 处理IP地理位置
+  rpc handleIPLocation(IPLocationRequest) returns (stream IPLocationResponse);  // 处理IP地理位置
 }
 
 message IPLocationRequest {

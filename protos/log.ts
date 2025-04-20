@@ -361,5 +361,5 @@ export interface LogService {
   /** 获取日志图表数据 */
   getLogsChart(request: QueryDTO): Observable<ChartList>;
   /** 处理IP地理位置 */
-  handleIPLocation(request: IPLocationRequest): Promise<IPLocationResponse>;
+  handleIPLocation(request: IPLocationRequest): Observable<IPLocationResponse>;
 }
