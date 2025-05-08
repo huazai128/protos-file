@@ -7,7 +7,7 @@
 /* eslint-disable */
 import { Observable } from "rxjs";
 
-export const protobufPackage = "expansion";
+export const protobufPackage = "expansionproto";
 
 /** 文件块信息 */
 export interface FileChunk {
