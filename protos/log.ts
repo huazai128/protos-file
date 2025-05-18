@@ -233,6 +233,10 @@ export interface SaveLogRequest {
   events: string;
   /** ua解析结果 */
   uaResult: string;
+  /** 组件ID */
+  cId: string;
+  /** 组件名称 */
+  tId: string;
 }
 
 export interface BehaviorItem {
