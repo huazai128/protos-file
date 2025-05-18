@@ -7,13 +7,13 @@ import public "common/chart_item.proto";
 
 
 service ErrorService {
-  rpc getErrorLogs (QueryDTO) returns (ErrorLogsResponse) {}
-  rpc getErrorList (ErrorListRequest) returns (ErrorListResponse) {}
-  rpc getErrorOverview (ErrorOverviewRequest) returns (ErrorOverviewResponse) {}
-  rpc getErrorValues (ErrorValuesRequest) returns (ErrorValuesResponse) {}
-  rpc getErrorCount (ErrorCountRequest) returns (ErrorCountResponse) {}
-  rpc getErrorStatisticsPaginate (ErrorStatisticsPaginateRequest) returns (ErrorStatisticsPaginateResponse) {}
-  rpc getErrorInfo (ErrorInfoRequest) returns (ErrorInfoResponse) {}
+  rpc getErrorLogs (QueryDTO) returns (stream ErrorLogsResponse) {}
+  rpc getErrorList (ErrorListRequest) returns (stream ErrorListResponse) {}
+  rpc getErrorOverview (ErrorOverviewRequest) returns (stream ErrorOverviewResponse) {}
+  rpc getErrorValues (ErrorValuesRequest) returns (stream ErrorValuesResponse) {}
+  rpc getErrorCount (ErrorCountRequest) returns (stream ErrorCountResponse) {}
+  rpc getErrorStatisticsPaginate (ErrorStatisticsPaginateRequest) returns (stream ErrorStatisticsPaginateResponse) {}
+  rpc getErrorInfo (ErrorInfoRequest) returns (stream ErrorInfoResponse) {}
 }
 
 message PaginateOptions {

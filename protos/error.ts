@@ -5,6 +5,7 @@
 // source: error.proto
 
 /* eslint-disable */
+import { Observable } from "rxjs";
 import { type QueryDTO } from "./common/query_dto";
 
 export const protobufPackage = "errorproto";
@@ -152,11 +153,11 @@ export interface ErrorInfoResponse {
 }
 
 export interface ErrorService {
-  getErrorLogs(request: QueryDTO): Promise<ErrorLogsResponse>;
-  getErrorList(request: ErrorListRequest): Promise<ErrorListResponse>;
-  getErrorOverview(request: ErrorOverviewRequest): Promise<ErrorOverviewResponse>;
-  getErrorValues(request: ErrorValuesRequest): Promise<ErrorValuesResponse>;
-  getErrorCount(request: ErrorCountRequest): Promise<ErrorCountResponse>;
-  getErrorStatisticsPaginate(request: ErrorStatisticsPaginateRequest): Promise<ErrorStatisticsPaginateResponse>;
-  getErrorInfo(request: ErrorInfoRequest): Promise<ErrorInfoResponse>;
+  getErrorLogs(request: QueryDTO): Observable<ErrorLogsResponse>;
+  getErrorList(request: ErrorListRequest): Observable<ErrorListResponse>;
+  getErrorOverview(request: ErrorOverviewRequest): Observable<ErrorOverviewResponse>;
+  getErrorValues(request: ErrorValuesRequest): Observable<ErrorValuesResponse>;
+  getErrorCount(request: ErrorCountRequest): Observable<ErrorCountResponse>;
+  getErrorStatisticsPaginate(request: ErrorStatisticsPaginateRequest): Observable<ErrorStatisticsPaginateResponse>;
+  getErrorInfo(request: ErrorInfoRequest): Observable<ErrorInfoResponse>;
 }
