@@ -1,9 +1,13 @@
 syntax = "proto3";
-
 package errorproto;
 
+import public "common/pagination.proto";
+import public "common/query_dto.proto";
+import public "common/chart_item.proto";
+
+
 service ErrorService {
-  rpc getErrorLogs (ErrorLogsRequest) returns (ErrorLogsResponse) {}
+  rpc getErrorLogs (QueryDTO) returns (ErrorLogsResponse) {}
   rpc getErrorList (ErrorListRequest) returns (ErrorListResponse) {}
   rpc getErrorOverview (ErrorOverviewRequest) returns (ErrorOverviewResponse) {}
   rpc getErrorValues (ErrorValuesRequest) returns (ErrorValuesResponse) {}

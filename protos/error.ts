@@ -5,6 +5,7 @@
 // source: error.proto
 
 /* eslint-disable */
+import { type QueryDTO } from "./common/query_dto";
 
 export const protobufPackage = "errorproto";
 
@@ -151,7 +152,7 @@ export interface ErrorInfoResponse {
 }
 
 export interface ErrorService {
-  getErrorLogs(request: ErrorLogsRequest): Promise<ErrorLogsResponse>;
+  getErrorLogs(request: QueryDTO): Promise<ErrorLogsResponse>;
   getErrorList(request: ErrorListRequest): Promise<ErrorListResponse>;
   getErrorOverview(request: ErrorOverviewRequest): Promise<ErrorOverviewResponse>;
   getErrorValues(request: ErrorValuesRequest): Promise<ErrorValuesResponse>;
