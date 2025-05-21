@@ -233,9 +233,9 @@ export interface SaveLogRequest {
   events: string;
   /** ua解析结果 */
   uaResult: string;
-  /** 组件ID */
+  /** 关联表自增id */
   cId: string;
-  /** 组件名称 */
+  /** 关联表_id */
   tId: string;
 }
 
