@@ -189,17 +189,17 @@ export interface ErrorStatistics {
 /** ErrorService defines the service for error handling */
 export interface ErrorService {
   /** Get error logs with pagination */
-  GetErrorLogs(request: GetErrorLogsRequest): Promise<PaginateResponse>;
+  getErrorLogs(request: GetErrorLogsRequest): Promise<PaginateResponse>;
   /** Get error list with aggregation */
-  GetErrorList(request: GetErrorListRequest): Promise<ErrorListResponse>;
+  getErrorList(request: GetErrorListRequest): Promise<ErrorListResponse>;
   /** Get error overview statistics */
-  GetErrorOverview(request: GetErrorOverviewRequest): Promise<ErrorOverviewResponse>;
+  getErrorOverview(request: GetErrorOverviewRequest): Promise<ErrorOverviewResponse>;
   /** Get error values statistics */
-  GetErrorValues(request: GetErrorValuesRequest): Promise<ErrorValuesResponse>;
+  getErrorValues(request: GetErrorValuesRequest): Promise<ErrorValuesResponse>;
   /** Get error count for specific time period */
-  GetErrorCount(request: GetErrorCountRequest): Promise<ErrorCountResponse>;
+  getErrorCount(request: GetErrorCountRequest): Promise<ErrorCountResponse>;
   /** Get paginated error statistics */
-  GetErrorStatisticsPaginate(request: GetErrorStatisticsPaginateRequest): Promise<ErrorStatisticsPaginateResponse>;
+  getErrorStatisticsPaginate(request: GetErrorStatisticsPaginateRequest): Promise<ErrorStatisticsPaginateResponse>;
   /** Get error info by ID */
-  GetErrorInfo(request: GetErrorInfoRequest): Promise<Error>;
+  getErrorInfo(request: GetErrorInfoRequest): Promise<Error>;
 }
