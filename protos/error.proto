@@ -67,25 +67,25 @@ message Error {
 // ErrorService defines the service for error handling
 service ErrorService {
   // Get error logs with pagination
-  rpc getErrorLogs(GetErrorLogsRequest) returns (PaginateResponse) {}
+  rpc getErrorLogs(GetErrorLogsRequest) returns (stream PaginateResponse) {}
   
   // Get error list with aggregation
-  rpc getErrorList(GetErrorListRequest) returns (ErrorListResponse) {}
+  rpc getErrorList(GetErrorListRequest) returns (stream ErrorListResponse) {}
   
   // Get error overview statistics
-  rpc getErrorOverview(GetErrorOverviewRequest) returns (ErrorOverviewResponse) {}
+  rpc getErrorOverview(GetErrorOverviewRequest) returns (stream ErrorOverviewResponse) {}
   
   // Get error values statistics
-  rpc getErrorValues(GetErrorValuesRequest) returns (ErrorValuesResponse) {}
+  rpc getErrorValues(GetErrorValuesRequest) returns (stream ErrorValuesResponse) {}
   
   // Get error count for specific time period
-  rpc getErrorCount(GetErrorCountRequest) returns (ErrorCountResponse) {}
+  rpc getErrorCount(GetErrorCountRequest) returns (stream ErrorCountResponse) {}
   
   // Get paginated error statistics
-  rpc getErrorStatisticsPaginate(GetErrorStatisticsPaginateRequest) returns (ErrorStatisticsPaginateResponse) {}
+  rpc getErrorStatisticsPaginate(GetErrorStatisticsPaginateRequest) returns (stream ErrorStatisticsPaginateResponse) {}
   
   // Get error info by ID
-  rpc getErrorInfo(GetErrorInfoRequest) returns (Error) {}
+  rpc getErrorInfo(GetErrorInfoRequest) returns (stream Error) {}
 }
 
 // Request messages

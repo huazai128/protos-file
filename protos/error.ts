@@ -5,6 +5,7 @@
 // source: error.proto
 
 /* eslint-disable */
+import { Observable } from "rxjs";
 
 export const protobufPackage = "errorproto";
 
@@ -189,17 +190,17 @@ export interface ErrorStatistics {
 /** ErrorService defines the service for error handling */
 export interface ErrorService {
   /** Get error logs with pagination */
-  getErrorLogs(request: GetErrorLogsRequest): Promise<PaginateResponse>;
+  getErrorLogs(request: GetErrorLogsRequest): Observable<PaginateResponse>;
   /** Get error list with aggregation */
-  getErrorList(request: GetErrorListRequest): Promise<ErrorListResponse>;
+  getErrorList(request: GetErrorListRequest): Observable<ErrorListResponse>;
   /** Get error overview statistics */
-  getErrorOverview(request: GetErrorOverviewRequest): Promise<ErrorOverviewResponse>;
+  getErrorOverview(request: GetErrorOverviewRequest): Observable<ErrorOverviewResponse>;
   /** Get error values statistics */
-  getErrorValues(request: GetErrorValuesRequest): Promise<ErrorValuesResponse>;
+  getErrorValues(request: GetErrorValuesRequest): Observable<ErrorValuesResponse>;
   /** Get error count for specific time period */
-  getErrorCount(request: GetErrorCountRequest): Promise<ErrorCountResponse>;
+  getErrorCount(request: GetErrorCountRequest): Observable<ErrorCountResponse>;
   /** Get paginated error statistics */
-  getErrorStatisticsPaginate(request: GetErrorStatisticsPaginateRequest): Promise<ErrorStatisticsPaginateResponse>;
+  getErrorStatisticsPaginate(request: GetErrorStatisticsPaginateRequest): Observable<ErrorStatisticsPaginateResponse>;
   /** Get error info by ID */
-  getErrorInfo(request: GetErrorInfoRequest): Promise<Error>;
+  getErrorInfo(request: GetErrorInfoRequest): Observable<Error>;
 }
