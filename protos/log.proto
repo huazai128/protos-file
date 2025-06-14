@@ -7,7 +7,7 @@ import public "common/chart_item.proto";
 
 service LogService {
   // 保存走kafka, 不过两种都支持====
-  rpc saveLog (SaveLogRequest) returns (stream LogResponse);  // 保存日志
+  rpc saveLog (stream SaveLogRequest) returns (stream LogResponse);  // 保存日志
   rpc getLogs (QueryDTO) returns (stream LogList);  // 获取日志列表
   rpc getLogsByCursor(QueryDTO) returns (stream LogList);  // 通过游标获取日志列表
   rpc getLogsChart(QueryDTO) returns (stream ChartList);  // 获取日志图表数据
