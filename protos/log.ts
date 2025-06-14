@@ -361,7 +361,9 @@ export interface StackTrace {
 
 export interface LogService {
   /** 保存走kafka, 不过两种都支持==== */
-  saveLog(request: Observable<SaveLogRequest>): Observable<LogResponse>;
+  saveLog(request: SaveLogRequest): Observable<LogResponse>;
+  /** 保存日志 */
+  saveLogChunked(request: Observable<SaveLogRequest>): Observable<LogResponse>;
   /** 获取日志列表 */
   getLogs(request: QueryDTO): Observable<LogList>;
   /** 通过游标获取日志列表 */
